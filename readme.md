@@ -1,5 +1,7 @@
 # Prevendo o Preço de Imóveis em São Petersburgo com Machine Learning - Real Estate Saint Petersburg 2014 - 2019
 
+![](doc/img/vadim-babenko-zjVLWDSewtE-unsplash.jpg)
+
 ### Conteúdo
 - [Introdução](#introdução)
 - [Metas e objetivos](#metas-e-objetivos)
@@ -7,8 +9,6 @@
 - [Métodos e modelos](#métodos-e-modelos)
 - [Resultados](#resultados)
 - [Ferramentas utilizadas](#ferramentas-utilizadas)
-
-![](doc/img/vadim-babenko-zjVLWDSewtE-unsplash.jpg)
 
 ## Introdução
 O dataset Real Estate Saint Petersburg 2014 - 2019 contém informações sobre anúncios de imóveis na segunda maior cidade da Russia, São Petersburgo, sendo fonte valiosos insights sobre o mercado imobiliário na região. Os dados incluem variáveis que descrevem tanto os imóveis, quanto seus arredores e instalações próximas que podem influenciar no preço. 
