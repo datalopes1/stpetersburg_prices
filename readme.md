@@ -43,7 +43,7 @@ O objetivo deste projeto é construir um modelo de machine learning capaz de  pr
 |`total_area`| Área total do imóvel em metros quadrados|
 |`total_images`| Número de imagens no anúncio|
 
-Os dados foram originalmente encontrados no [Kaggle]((https://www.kaggle.com/datasets/litvinenko630/real-estate-saint-petersburg-2014-2019/data?select=real_estate_data.csv)) e também estão disponíveis neste repositório.
+Os dados foram originalmente encontrados no [Kaggle](https://www.kaggle.com/datasets/litvinenko630/real-estate-saint-petersburg-2014-2019/data?select=real_estate_data.csv) e também estão disponíveis na pasta [data](https://github.com/datalopes1/stpetersburg_prices/tree/main/data/raw) deste repositório.
 
 ## Métodos e modelos
 ####  Pré-processamento e otimizações
