@@ -54,28 +54,28 @@ Os dados foram originalmente encontrados no [Kaggle](https://www.kaggle.com/data
 - Mean Squared Error, Root Mean Squared Error, Mean Absolute Error, R2 Score.
 
 ## Resultados
-#### Modelo base
+#### Conjunto de validação
 |Métrica|Resultado|
 |---|---|
-|Mean Squared Error|0.0467|
-|Root Mean Squared Error|0.2161|
-|Mean Absolute Error|0.1411|
-|R2 Score|0.8859|
+|MSE| 0.0503|
+|RMSE| 0.2244|
+|MAE| 0.1482|
+|R2 Score| 0.8809|
 
 ![](doc/img/plots/plot4.png)
 
-#### Modelo com hiper-parâmetros otimizados
+#### Conjunto de testes
 |Métrica|Resultado|
 |---|---|
-|Mean Squared Error|0.03914|
-|Root Mean Squared Error|0.1978|
-|Mean Absolute Error|0.1349|
-|R2 Score|0.9044|
+|MSE| 0.0557|
+|RMSE| 0.2359|
+|MAE| 0.1440|
+|R2 Score| 0.8777|
 
-![](doc/img/plots/plot5.png)
+![](doc/img/plots/plot7.png)
 
 #### Feature Importances
-![](doc/img/plots/plot6.png)
+![](doc/img/plots/plot8.png)
 
 ## Ferramentas utilizadas
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
