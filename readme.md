@@ -54,6 +54,7 @@ Os dados foram originalmente encontrados no [Kaggle](https://www.kaggle.com/data
 - Mean Squared Error, Root Mean Squared Error, Mean Absolute Error, R2 Score.
 
 ## Resultados
+Um arquivo .xlsx com as previsões realizadas pelo modelo pode ser encontrado na pasta `data` do repositório.
 #### Conjunto de validação
 |Métrica|Resultado|
 |---|---|
