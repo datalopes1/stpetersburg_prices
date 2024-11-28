@@ -1,22 +1,15 @@
-# Prevendo o Preço de Imóveis em São Petersburgo com Machine Learning - Real Estate Saint Petersburg 2014 - 2019
+# Predição de Preço de Imóveis - Real Estate Saint Petersburg 2014 - 2019
 
-![](doc/img/vadim-babenko-zjVLWDSewtE-unsplash.jpg)
+![holder](doc/img/vadim-babenko-zjVLWDSewtE-unsplash.jpg)
 
-### Conteúdo
-- [Introdução](#introdução)
-- [Metas e objetivos](#metas-e-objetivos)
-- [Dados](#dados)
-- [Métodos e modelos](#métodos-e-modelos)
-- [Resultados](#resultados)
-- [Ferramentas utilizadas](#ferramentas-utilizadas)
+## 📝 Introdução
+São Petersburgo é a segunda maior cidade russa, o dataset Real Estate Saint Petersburg 2014 - 2019 contém uma rica quantidade de informações sobre o mercado imobiliário local. Os dados incluem variáveis que descrevem tanto os imóveis, quanto a região onde cada um está localizado. Portanto meu objetivo neste projeto foi explorar os dados para construir um modelo de machine learning capaz de predizer os preços dos imóveis na cidade. 
 
-## Introdução
-O dataset Real Estate Saint Petersburg 2014 - 2019 contém informações sobre anúncios de imóveis na segunda maior cidade da Russia, São Petersburgo, sendo fonte valiosos insights sobre o mercado imobiliário na região. Os dados incluem variáveis que descrevem tanto os imóveis, quanto seus arredores e instalações próximas que podem influenciar no preço. 
+## 🛠️ Ferramentas 
+- **Python 3.12+**
+    - **Bibliotecas:** Pandas, NumPy, Scikit-learn, XGBoost, feature-engine, category-encoders, openpyxl, Optuna
 
-## Metas e objetivos
-O objetivo deste projeto é construir um modelo de machine learning capaz de  predizer o preço de imóveis em São Petersburgo. 
-
-## Dados
+## 📊 Dataset
 
 |Coluna|Descrição|
 |--|--|
@@ -43,40 +36,100 @@ O objetivo deste projeto é construir um modelo de machine learning capaz de  pr
 |`total_area`| Área total do imóvel em metros quadrados|
 |`total_images`| Número de imagens no anúncio|
 
-Os dados foram originalmente encontrados no [Kaggle](https://www.kaggle.com/datasets/litvinenko630/real-estate-saint-petersburg-2014-2019/data?select=real_estate_data.csv) e também estão disponíveis na pasta [data](https://github.com/datalopes1/stpetersburg_prices/tree/main/data/raw) deste repositório.
+## ✅ Resultados
 
-## Métodos e modelos
-####  Pré-processamento e otimizações
-- Scikit-learn, Optuna, Category Encoders, Feature Engine.
-#### Modelos
-- XGBoost.
-#### Métricas de avaliação
-- Mean Squared Error, Root Mean Squared Error, Mean Absolute Error, R2 Score.
+### Métricas do modelo
 
-## Resultados
-Um arquivo .xlsx com as previsões realizadas pelo modelo pode ser encontrado na pasta `data` do repositório.
-#### Conjunto de validação
 |Métrica|Resultado|
 |---|---|
-|MSE| 0.0503|
-|RMSE| 0.2244|
-|MAE| 0.1482|
-|R2 Score| 0.8809|
+|**MSE**| 0.0452|
+|**RMSE**| 0.2126|
+|**MAE**| 0.1423|
+|**R2 Score**| 0.8897|
 
-![](doc/img/plots/plot4.png)
+#### Sobre os resultados
+Vale destacar que foi necessária uma transformação em $\log$, então pode-se ler os resultados em termo de porcentagem. O modelo utilizado foi o XGBRegressor da biblioteca XGBoost.
 
-#### Conjunto de testes
-|Métrica|Resultado|
-|---|---|
-|MSE| 0.0557|
-|RMSE| 0.2359|
-|MAE| 0.1440|
-|R2 Score| 0.8777|
+#### Visualizações
 
-![](doc/img/plots/plot7.png)
+##### Real x Predito
 
-#### Feature Importances
-![](doc/img/plots/plot8.png)
+![rxp](doc/img/plots/plot_6.png)
 
-## Ferramentas utilizadas
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
+##### Distribuição dos Resíduos
+
+![res](doc/img/plots/plot_7.png)
+
+##### Feature Importances
+
+![fi](doc/img/plots/plot_8.png)
+
+## ⚙️ Como usar
+
+### Estrutura do projeto
+```plaintext
+.
+├── data/                  
+│   ├── raw/  
+|   |   └── real_estate_data.csv    
+│   └── processed/                  
+│       └── predictions.xlsx          
+│
+├── doc/                            
+│   ├── img/   
+|   |   ├──plots/ 
+|   |   |   └── [Arquivos dos plots gerados na EDA (stprices.ipynb)]                                
+|   |   ├──vadim-babenko-zjVLWDSewtE-unsplash.jpg
+|   └──.gitkeep        
+│
+├── notebook/                       
+│   └── stprices.ipynb                
+│
+├── scr/   
+|   ├── __init__.py
+|   ├── predict.py                       
+│   └── train.py         
+│
+├── .gitignore
+├── poetry.lock                     
+├── pyproject.toml          
+├── readme.md               
+
+```
+
+##### Instalar poetry
+```bash
+pip install poetry
+```
+
+##### Clonar repositório
+```bash
+git clone https://github.com/datalopes1/stpetersburg_prices.git
+cd stpetersburg_prices/
+```
+
+##### Instalação das dependências
+```bash
+poetry install
+```
+
+##### Ativação do ambiente virtual
+```bash
+poetry shell
+```
+
+##### Treinamento do modelo e criação do arquivo `.pkl`
+```bash
+poetry run python scr/train.py
+```
+
+##### Gerar arquivo `.xlsx` com predições
+```bash
+poetry run python scr/predict.py
+``` 
+
+## 📞 Contato
+
+- LinkedIn: https://www.linkedin.com/in/andreluizls1
+- Portfolio: https://sites.google.com/view/datalopes1
+- E-mail: datalopes1@proton.me          
