@@ -70,10 +70,10 @@ Vale destacar que foi necessária uma transformação em $\log$, então pode-se 
 ```plaintext
 .
 ├── data/                  
-│   ├── raw/  
-|   |   └── real_estate_data.csv    
-│   └── processed/                  
-│       └── predictions.xlsx          
+│   ├── processed/  
+|   |   └── predictions.xlsx   
+│   └── raw/                  
+│       └── real_estate_data.csv           
 │
 ├── doc/                            
 │   ├── img/   
@@ -82,6 +82,9 @@ Vale destacar que foi necessária uma transformação em $\log$, então pode-se 
 |   |   ├──vadim-babenko-zjVLWDSewtE-unsplash.jpg
 |   └──.gitkeep        
 │
+├── models/
+|    └── regressor.pkl
+|
 ├── notebook/                       
 │   └── stprices.ipynb                
 │
