@@ -90,13 +90,18 @@ Vale destacar que foi necessária uma transformação em $\log$, então pode-se 
 │
 ├── scr/   
 |   ├── __init__.py
-|   ├── predict.py                       
-│   └── train.py         
+|   ├── data_preprocessing.py                       
+│   ├── evaluate_model.py         
+│   ├── predict.py         
+│   ├── train_model.py         
+│   ├── utils.py         
 │
 ├── .gitignore
 ├── poetry.lock                     
 ├── pyproject.toml          
-├── readme.md               
+├── README.md  
+├── requirements.txt
+             
 
 ```
 ### Instalação e uso
@@ -117,19 +122,18 @@ cd stpetersburg_prices/
 poetry install
 ```
 
-##### Ativação do ambiente virtual
-```bash
-poetry shell
-```
-
 ##### Treinamento do modelo e criação do arquivo `.pkl`
 ```bash
-poetry run python scr/train.py
+poetry run python scr/train_model.py
 ```
 
 ##### Gerar arquivo `.xlsx` com predições
 ```bash
 poetry run python scr/predict.py
+``` 
+##### Gerar métricas do modelo
+```bash
+poetry run python scr/evaluate_model.py
 ``` 
 
 ## 📞 Contato
