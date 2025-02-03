@@ -71,7 +71,9 @@ Vale destacar que foi necessária uma transformação em $\log$, então pode-se 
 .
 ├── data/                  
 │   ├── processed/  
-|   |   └── predictions.xlsx   
+|   |   ├── predictions.xlsx   
+|   |   ├── test_data.csv
+│   |   └── train_data.csv 
 │   └── raw/                  
 │       └── real_estate_data.csv           
 │
@@ -79,7 +81,7 @@ Vale destacar que foi necessária uma transformação em $\log$, então pode-se 
 │   ├── img/   
 |   |   ├──plots/ 
 |   |   |   └── [Arquivos dos plots gerados na EDA (stprices.ipynb)]                                
-|   |   ├──vadim-babenko-zjVLWDSewtE-unsplash.jpg
+|   |   └── vadim-babenko-zjVLWDSewtE-unsplash.jpg
 |   └──.gitkeep        
 │
 ├── models/
@@ -94,13 +96,13 @@ Vale destacar que foi necessária uma transformação em $\log$, então pode-se 
 │   ├── evaluate_model.py         
 │   ├── predict.py         
 │   ├── train_model.py         
-│   ├── utils.py         
+│   └── utils.py         
 │
 ├── .gitignore
 ├── poetry.lock                     
 ├── pyproject.toml          
 ├── README.md  
-├── requirements.txt
+└── requirements.txt
              
 
 ```
